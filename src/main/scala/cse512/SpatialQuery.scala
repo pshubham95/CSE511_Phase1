@@ -34,6 +34,12 @@ object SpatialQuery extends App{
       }
 
 
+  /*
+    ST_WITHIN function, Params:
+    point1: x,y co-ordinates of 1st point
+    point2: x,y co-ordinates of 2nd point
+    distance: the threshold , if points fall within distance return true or else false
+   */
   def ST_Within(point1: String, point2: String, distance: Double): Boolean = {
     if (distance <= 0 || point1 == null || point2 == null) {
       return  false
